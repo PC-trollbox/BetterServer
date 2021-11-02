@@ -28,6 +28,7 @@ accounts.
 	NodeJSVer - Shows the server Node.JS version. Used only for stats!!!!!
 	OutputVanilla - Shows if there's any plugins. Used only for stats!!!!!
 	UserAgentDesc - Shows OS and browser. Debug, used only for stats!!!!!
+	IpPlaceHolder - Shows the IP.
 
 Error pages to get this file too long :D
 	maintenance.html - The maintenance page that will get shown by maintenancePg.
