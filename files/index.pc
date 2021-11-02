@@ -1,0 +1,14 @@
+readDB
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Site main page</title>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<style> * { font-family: "Segoe UI"; } </style>
+	</head>
+	<body>
+		You got this message, because you have installed BetterServer and haven't configured it yet. Enjoy!
+		<br>
+		<a href="/debug.pc">Get main information</a>
+	</body>
+</html>
