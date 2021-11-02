@@ -1,0 +1,41 @@
+readDB
+basicAuth
+methodRest GET
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Debug page</title>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<style> * { font-family: "Segoe UI"; } </style>
+	</head>
+	<body>
+		<p>Your IP address: IpPlaceHolder</p>
+execJS "<p>Can execute JS: true</p>";
+		<p title="If there's plugins installed, then the output can't be trusted. If there's no plugins, the output is trusted.">Can output be trusted: OutputVanilla</p>
+		<p>Server Node.JS version: NodeJSVer</p>
+		<p>Client's device description: UserAgentDesc</p> 
+		<br>
+		<hr>
+		<p>Trouble shooting:</p>
+		<p>1. Node.JS version too outdated?</p>
+		<p>Solution: Update NodeJS and npm:</p>
+		<code style="font-family: monospace;">$ npm install -g npm</code>
+		<br>
+		<code style="font-family: monospace;">$ npm install -g node</code>
+		<p>Alternate: Update using APT (for Linux):</p>
+		<code style="font-family: monospace;">$ apt update</code>
+		<br>
+		<code style="font-family: monospace;">$ apt upgrade node</code>
+		<p>2. Don't see "Can execute JS"</p>
+		<p>Solution: Check if it's disabled in config.json.</p>
+		<p>3. I have installed plugins, but output is trusted, and my plugins are ignored!</p>
+		<p>Solution: Check if it's disabled in config.json. Check if you downloaded the plugin in the correct folder.</p>
+		<p>4. I get raw errors on page instead of 404!</p>
+		<p>Solution: Check if errors folder is there. There must be maintenance, noBasicAuth, noTCAuth, notFound HTMLs. If they don't exist, try redownloading BetterServer from PC's original resources.</p>
+		<p>5. I can't really start the server. I renamed .PC to .HTML to see what's in here. Error is about some typescript module import or something? It impacts node-fetch.</p>
+		<p>Solution: Downgrade node-fetch:</p>
+		<code style="font-family: monospace;">$ npm install node-fetch@2</code>
+		<p>6. Anyone can access this page (which is locked) by using "admin" username and "changeMeThisIsImportant"/"changeme" password! How to fix?</p>
+		<p>Solution: Modify config.json to make other password than "changeMeThisIsImportant". Modify database.db to make other password than "changeme". Anyways, you can also not ask for anything, by removing the basicAuth command, because this page does not show private information.</p>
+	</body>
+</html>
